@@ -1,1 +1,78 @@
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        .con {
+            align-items: center;
+            text-align: center;
+        }
+
+        input {
+            width: 290px;
+            height: 30px;
+        }
+
+
+        .btn {
+            width: 90px;
+            height: 35px;
+            font-size: 15px;
+        }
+
+
+        fieldset {
+            margin-top: 8px;
+            padding: 50px;
+        }
+
+        p {
+            color: blue;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <legend style="text-align:center;">Form</legend>
+        <div class="con">
+
+            <form onsubmit="validate()">
+                <script>
+                    function validate() {
+                        var name = document.getElementById("Name");
+                        var password = document.getElementById("Password")
+                        if (name.value.trim() == "") {
+                            alert("Your Name");
+                            return false;
+                        }
+                        else if (password.value.trim() == "") {
+                            alert("Password");
+                            return false;
+                        }
+                        else {
+                            alert("Submitted")
+                            true;
+                        }
+                    }
+                </script>
+                <label for="Name" class="name">Name:</label><br>
+                <input type="text" id="Name" placeholder="Username"><br><br>
+
+                <label for="Passward" class="password">Password:</label><br>
+                <input type="password" name="" id="Password" placeholder="Password:"><br><br>
+                <input type="submit" value="Login" class="btn" onclick="s()">
+
+            </form>
+        </div>
+    </fieldset>
+</body>
+
+</html>
